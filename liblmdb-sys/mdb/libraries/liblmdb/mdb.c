@@ -318,6 +318,8 @@ union semun {
 # endif
 #endif /* !MDB_USE_ROBUST */
 
+#undef MDB_USE_ROBUST
+
 #if defined(MDB_USE_POSIX_MUTEX) && (MDB_USE_ROBUST)
 /* glibc < 2.12 only provided _np API */
 #  if (defined(__GLIBC__) && GLIBC_VER < 0x02000c) || \

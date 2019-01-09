@@ -11,7 +11,6 @@ fn main() {
     if target.contains("dragonfly") {
         config.flag("-DMDB_DSYNC=O_SYNC");
         config.flag("-DMDB_FDATASYNC=fsync");
-        config.flag("-DMDB_USE_ROBUST=0");
     }
 
     config.compile("liblmdb.a");
